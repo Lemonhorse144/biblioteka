@@ -7,18 +7,18 @@
 </head>
 <body>
     <h1>Dodawanie książki</h1>
-    <form action="dodaj_ksiazke.php" method="post">
+    <form action="dodaj_ksiazka.php" method="post">
         <div class="form-group">
             <label for="tytul">Tytuł:</label>
-            <input type="text" name="tytul" id="tytul" maxlength="50">
+            <input type="text" name="tytul" id="tytul" maxlength="50" placeholder="Tytuł książki">
         </div>
         <div class="form-group">
             <label for="autor">Autor:</label>
-            <input type="text" name="autor" id="autor" maxlength="50">
+            <input type="text" name="autor" id="autor" maxlength="50" placeholder="Autor książki">
         </div>
         <div class="form-group">
             <label for="autor">ISBN:</label>
-            <input type="text" name="autor" id="autor" maxlength="50">
+            <input type="text" name="isbn" id="isbn" maxlength="13" pattern="\d{9}|\d{10}|\d{13}" placeholder="_____________">
         </div>
         <input type="submit" value="Zapisz">
     </form>

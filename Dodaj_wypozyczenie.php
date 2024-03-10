@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Potwierdzenie wypożyczenia</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Potwierdzenie wypożyczenia</h1>
@@ -10,14 +11,12 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $czytelnik = $_POST["uzytkownik"];
         $kod = $_POST["ksiazka"];
-        
         // Ustaw datę wypożyczenia na teraz
         $data_wypozyczenia = date("Y-m-d");
-        
         // Ustaw datę zwrotu na miesiąc od teraz
         $data_zwrotu = date("Y-m-d", strtotime("+1 month"));
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "twoja_baza_danych");
+        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
