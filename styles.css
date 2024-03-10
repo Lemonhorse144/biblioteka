@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4e8c1; /* Kolor tła: beżowy */
+}
+
+h1 {
+    color: #624301; /* Nowy kolor tekstu dla nagłówka zwiększający kontrast */
+}
+
+p {
+    color: #7d7d7d; /* Kolor tekstu dla zwykłego tekstu */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    width: 100%; /* Przycisk zajmuje całą dostępną szerokość */
+    max-width: 400px; /* Maksymalna szerokość przycisku */
+    padding: 15px 20px; /* Zwiększono odstępy wewnętrzne dla lepszego wyglądu */
+    font-size: 16px;
+    border: none;
+    background-color: #e3c077; /* Kolor tła przycisku */
+    color: #3d3d3d; /* Nowy kolor tekstu dla przycisków zwiększający kontrast */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
+}
+
+input[type="submit"] {
+    width: 100%; /* Przycisk submit zajmuje całą dostępną szerokość */
+    max-width: 200px; /* Maksymalna szerokość przycisku submit */
+    padding: 10px 15px; /* Dostosowano odstępy wewnętrzne dla mniejszego rozmiaru */
+    font-size: 14px; /* Zmniejszono rozmiar czcionki dla przycisku submit */
+    border: none;
+    background-color: #e3c077; /* Kolor tła przycisku submit */
+    color: #3d3d3d; /* Nowy kolor tekstu dla przycisków zwiększający kontrast */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #d9b65e; /* Kolor tła przycisku po najechaniu myszką */
+    color: #322f2b; /* Nowy kolor tekstu dla przycisków po najechaniu myszką zwiększający kontrast */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7d7d7d;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    border: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
