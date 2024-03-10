@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Wyświetlanie wypożyczeń</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Wyświetlanie wypożyczeń</h1>
+    <form action="Wyswietl_wypozyczenia.php" method="post">
+        <div class="form-group">
+            <label for="uzytkownik">Czytelnik:</label>
+            <input type="text" pattern="\d*" inputmode="numeric" name="uzytkownik" id="uzytkownik" maxlength="50">
+        </div>
+        <input type="submit" value="Wyświetl wypożyczenia">
+    </form>
+    <br><a href='index.html'>Anuluj</a>
+</body>
+</html>
