@@ -30,25 +30,20 @@ button {
     transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="tel"], input[type="email"]  {
     width: 100%; /* Przycisk submit zajmuje całą dostępną szerokość */
     max-width: 200px; /* Maksymalna szerokość przycisku submit */
+    height: 19px;
     padding: 10px 15px; /* Dostosowano odstępy wewnętrzne dla mniejszego rozmiaru */
     font-size: 14px; /* Zmniejszono rozmiar czcionki dla przycisku submit */
-    border: none;
+    border: 1px solid #ccc;
     background-color: #e3c077; /* Kolor tła przycisku submit */
     color: #3d3d3d; /* Nowy kolor tekstu dla przycisków zwiększający kontrast */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
 }
 
-input[type="text"] {
-    width: 100%;
-    max-width: 200px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-}
+
 
 button:hover, input[type="submit"]:hover {
     background-color: #d9b65e; /* Kolor tła przycisku po najechaniu myszką */
