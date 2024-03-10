@@ -25,7 +25,19 @@
         $sql = "INSERT INTO wypożyczenia (czytelnik, kod, wypożyczenie, zwrot) VALUES ('$czytelnik', '$kod', '$data_wypozyczenia', '$data_zwrotu')";
 
         if ($polaczenie->query($sql) === TRUE) {
-            echo "Dodano wypożyczenie dla czytelnika $czytelnik, kodu książki $kod, na dzień wypożyczenia $data_wypozyczenia, z planowanym zwrotem $data_zwrotu <br>";
+            // Pobierz imię i nazwisko czytelnika
+            $query_czytelnik = "SELECT imie, nazwisko FROM czytelnicy WHERE czytelnik = '$czytelnik'";
+            $result_czytelnik = $polaczenie->query($query_czytelnik);
+            $row_czytelnik = $result_czytelnik->fetch_assoc();
+            $imie_nazwisko = $row_czytelnik["imie"] . " " . $row_czytelnik["nazwisko"];
+
+            // Pobierz tytuł książki
+            $query_ksiazka = "SELECT tytul FROM ksiegozbior WHERE kod = '$kod'";
+            $result_ksiazka = $polaczenie->query($query_ksiazka);
+            $row_ksiazka = $result_ksiazka->fetch_assoc();
+            $tytul_ksiazki = $row_ksiazka["tytul"];
+
+            echo "Dodano wypożyczenie dla czytelnika $imie_nazwisko, kodu książki $kod (tytuł: $tytul_ksiazki), na dzień wypożyczenia $data_wypozyczenia, z planowanym zwrotem $data_zwrotu <br>";
         } else {
             echo "Błąd podczas dodawania wypożyczenia: " . $polaczenie->error;
         }
