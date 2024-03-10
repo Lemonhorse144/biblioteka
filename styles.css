@@ -1,15 +1,15 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f4e8c1; /* Kolor tła: beżowy */
+    background-color: #f4e8c1;
 }
 
 h1 {
-    color: #624301; /* Nowy kolor tekstu dla nagłówka zwiększający kontrast */
+    color: #624301;
 }
 
 p {
-    color: #7d7d7d; /* Kolor tekstu dla zwykłego tekstu */
+    color: #7d7d7d;
 }
 
 .buttons {
@@ -19,35 +19,43 @@ p {
 }
 
 button {
-    width: 100%; /* Przycisk zajmuje całą dostępną szerokość */
-    max-width: 400px; /* Maksymalna szerokość przycisku */
-    padding: 15px 20px; /* Zwiększono odstępy wewnętrzne dla lepszego wyglądu */
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
     font-size: 16px;
     border: none;
-    background-color: #e3c077; /* Kolor tła przycisku */
-    color: #3d3d3d; /* Nowy kolor tekstu dla przycisków zwiększający kontrast */
+    background-color: #e3c077;
+    color: #3d3d3d;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-input[type="submit"], input[type="tel"], input[type="email"]  {
-    width: 100%; /* Przycisk submit zajmuje całą dostępną szerokość */
-    max-width: 200px; /* Maksymalna szerokość przycisku submit */
-    height: 19px;
-    padding: 10px 15px; /* Dostosowano odstępy wewnętrzne dla mniejszego rozmiaru */
-    font-size: 14px; /* Zmniejszono rozmiar czcionki dla przycisku submit */
+input[type="submit"] {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #e3c077;
+    color: #3d3d3d;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    background-color: #e3c077; /* Kolor tła przycisku submit */
-    color: #3d3d3d; /* Nowy kolor tekstu dla przycisków zwiększający kontrast */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Płynne przejścia kolorów */
 }
 
-
-
-button:hover, input[type="submit"]:hover {
-    background-color: #d9b65e; /* Kolor tła przycisku po najechaniu myszką */
-    color: #322f2b; /* Nowy kolor tekstu dla przycisków po najechaniu myszką zwiększający kontrast */
+button:hover,
+input[type="submit"]:hover {
+    background-color: #c5ac4a;
+    color: #322f2b;
 }
 
 .form-group {
