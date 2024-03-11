@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Prolongowanie wypożyczenia</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Prolongowanie wypożyczenia</h1>
+    <form action="Prolongata_wypozyczenie.php" method="post">
+        <div class="form-group">
+            <label for="uzytkownik">Użytkownik:</label>
+            <input type="text" pattern="\d*" inputmode="numeric" name="uzytkownik" id="uzytkownik" maxlength="50">
+        </div>
+        <input type="submit" value="Przejdź do potwierdzenia">
+    </form>
+    <br><a href='index.html'>Anuluj</a>
+</body>
+</html>
