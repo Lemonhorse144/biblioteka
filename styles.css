@@ -79,7 +79,6 @@ a:hover {
 }
 
 table {
-    width: 100%;
     border: 1px;
     border-collapse: collapse;
     margin: 25px 0;
@@ -87,20 +86,23 @@ table {
     text-align: left;
 }
 
-th, thead {
+th,
+thead {
     background-color: #8b7a35;
     color: white;
     font-weight: bold;
     padding: 12px 15px;
 }
 
-td, tbody {
+td,
+tbody {
     padding: 12px 15px;
-	    border-bottom: 2px solid #8b7a35;
+    border-bottom: 2px solid #8b7a35;
     border-left: 2px solid #8b7a35;
     border-right: 2px solid #8b7a35;
 }
 
-tr, tbody {
+tr,
+tbody {
     border-bottom: 1px solid #ddd;
 }
