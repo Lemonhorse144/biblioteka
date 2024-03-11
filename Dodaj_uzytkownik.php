@@ -12,7 +12,7 @@
         $imie = $_POST["imie"];
         $nazwisko = $_POST["nazwisko"];
         $miejscowosc = $_POST["miejscowosc"];
-        $kod = $_POST["kod"];
+        $kodpocztowy = $_POST["kodpocztowy"];
         $ulica = $_POST["ulica"];
         $telefon = $_POST["telefon"];
         $mail = $_POST["mail"];
@@ -42,12 +42,12 @@
         $sql_czytelnicy = "INSERT INTO czytelnicy (czytelnik, imie, nazwisko) VALUES ('$nowy_czytelnik', '$imie', '$nazwisko')";
 
         // Wstaw dane do tabeli dane
-        $sql_dane = "INSERT INTO dane (czytelnik, miejscowosc, kod, ulica, telefon, mail) 
-                        VALUES ('$nowy_czytelnik', '$miejscowosc', '$kod', '$ulica', '$telefon', '$mail')";
+        $sql_dane = "INSERT INTO dane (czytelnik, miejscowosc, kodpocztowy, ulica, telefon, mail) 
+                        VALUES ('$nowy_czytelnik', '$miejscowosc', '$kodpocztowy', '$ulica', '$telefon', '$mail')";
 
         // Wykonaj zapytania
         if ($polaczenie->query($sql_czytelnicy) === TRUE && $polaczenie->query($sql_dane) === TRUE) {
-            echo "Dodano użytkownika o imieniu '$imie', nazwisku '$nazwisko', miejscowości '$miejscowosc', kodzie '$kod', ulicy '$ulica', telefonie '$telefon' i mailu '$mail'.";
+            echo "Dodano użytkownika o imieniu '$imie', nazwisku '$nazwisko', miejscowości '$miejscowosc', kodzie '$kodpocztowy', ulicy '$ulica', telefonie '$telefon' i mailu '$mail'.";
         } else {
             echo "Błąd podczas dodawania użytkownika: " . $polaczenie->error;
         }

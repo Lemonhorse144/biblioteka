@@ -10,7 +10,7 @@
     <form action="Wyswietl_wypozyczenia.php" method="post">
         <div class="form-group">
             <label for="uzytkownik">Czytelnik:</label>
-            <input type="text" pattern="\d*" inputmode="numeric" name="uzytkownik" id="uzytkownik" maxlength="50">
+            <input required type="text" name="uzytkownik" id="uzytkownik" maxlength="10" pattern="\d*" placeholder="__________">
         </div>
         <input type="submit" value="Wyświetl wypożyczenia">
     </form>

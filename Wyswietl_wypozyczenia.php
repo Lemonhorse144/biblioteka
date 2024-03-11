@@ -36,7 +36,7 @@
 
         if ($result_wypozyczenia->num_rows > 0) {
             echo "<table>";
-            echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Data wypożyczenia</th><th>Data zwrotu</th></tr>";
+            echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Data wypożyczenia</th><th>Termin zwrotu</th></tr>";
 
             while ($row_wypozyczenia = $result_wypozyczenia->fetch_assoc()) {
                 echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td></tr>";
