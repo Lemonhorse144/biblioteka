@@ -87,7 +87,7 @@ table {
 }
 
 th {
-    background-color: #333;
+    background-color: #8b7a35;
     color: white;
     font-weight: bold;
     padding: 12px 15px;
@@ -95,9 +95,9 @@ th {
 
 td {
     padding: 12px 15px;
-	    border-bottom: 2px solid #333;
-    border-left: 2px solid #333;
-    border-right: 2px solid #333;
+	    border-bottom: 2px solid #8b7a35;
+    border-left: 2px solid #8b7a35;
+    border-right: 2px solid #8b7a35;
 }
 
 tr {

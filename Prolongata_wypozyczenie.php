@@ -10,7 +10,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $czytelnik = $_POST["uzytkownik"];
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "twoja_baza_danych");
+        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);

@@ -28,10 +28,10 @@
         }
 
         // Pobierz wypożyczenia
-        $sql_wypozyczenia = "SELECT wypożyczenia.czytelnik, wypożyczenia.kod, wypożyczenia.wypożyczenie, wypożyczenia.zwrot, ksiegozbior.tytul
-                            FROM wypożyczenia
-                            JOIN ksiegozbior ON wypożyczenia.kod = ksiegozbior.kod
-                            WHERE wypożyczenia.czytelnik = '$czytelnik'";
+        $sql_wypozyczenia = "SELECT wypozyczenia.czytelnik, wypozyczenia.kod, wypozyczenia.wypozyczenie, wypozyczenia.zwrot, ksiegozbior.tytul
+                            FROM wypozyczenia
+                            JOIN ksiegozbior ON wypozyczenia.kod = ksiegozbior.kod
+                            WHERE wypozyczenia.czytelnik = '$czytelnik'";
         $result_wypozyczenia = $polaczenie->query($sql_wypozyczenia);
 
         if ($result_wypozyczenia->num_rows > 0) {
@@ -39,7 +39,7 @@
             echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Data wypożyczenia</th><th>Data zwrotu</th></tr>";
 
             while ($row_wypozyczenia = $result_wypozyczenia->fetch_assoc()) {
-                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["wypożyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td></tr>";
+                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td></tr>";
             }
 
             echo "</table>";

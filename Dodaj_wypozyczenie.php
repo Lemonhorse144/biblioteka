@@ -22,7 +22,7 @@
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
         }
 
-        $sql = "INSERT INTO wypożyczenia (czytelnik, kod, wypożyczenie, zwrot) VALUES ('$czytelnik', '$kod', '$data_wypozyczenia', '$data_zwrotu')";
+        $sql = "INSERT INTO wypozyczenia (czytelnik, kod, wypozyczenie, zwrot) VALUES ('$czytelnik', '$kod', '$data_wypozyczenia', '$data_zwrotu')";
 
         if ($polaczenie->query($sql) === TRUE) {
             // Pobierz imię i nazwisko czytelnika
