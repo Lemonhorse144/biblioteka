@@ -9,9 +9,9 @@
     <nav>
         <div>
             <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
-            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
             <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
             <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
+            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
         </div>
     </nav>
     <?php
@@ -36,18 +36,17 @@
         }
 
         // Pobierz wypożyczenia
-        $sql_wypozyczenia = "SELECT wypozyczenia.czytelnik, wypozyczenia.kod, wypozyczenia.wypozyczenie, wypozyczenia.zwrot, ksiegozbior.tytul
-                            FROM wypozyczenia
-                            JOIN ksiegozbior ON wypozyczenia.kod = ksiegozbior.kod
-                            WHERE wypozyczenia.czytelnik = '$czytelnik'";
+        $sql_wypozyczenia = "SELECT wypozyczenia.num, wypozyczenia.czytelnik, wypozyczenia.kod, wypozyczenia.wypozyczenie, wypozyczenia.zwrot, ksiegozbior.tytul
+                            FROM wypozyczenia JOIN ksiegozbior ON wypozyczenia.kod = ksiegozbior.kod
+                            WHERE wypozyczenia.czytelnik = '$czytelnik' AND wypozyczenia.oddano IS NULL";
         $result_wypozyczenia = $polaczenie->query($sql_wypozyczenia);
 
         if ($result_wypozyczenia->num_rows > 0) {
             echo "<table>";
-            echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Data wypożyczenia</th><th>Termin zwrotu</th></tr>";
+            echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Numer wypożyczenia</th><th>Data wypożyczenia</th><th>Termin zwrotu</th><th>Akcje</th></tr>";
 
             while ($row_wypozyczenia = $result_wypozyczenia->fetch_assoc()) {
-                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td></tr>";
+                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["num"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td><td><button onclick=\"location.href='Prolong.php?kod=" . $row_wypozyczenia['kod'] . "';\">Prolonguj</button><button onclick=\"location.href='Zwrot.php?kod=" . $row_wypozyczenia['kod'] . "';\">Zwróć</button></td></tr>";
             }
 
             echo "</table>";
