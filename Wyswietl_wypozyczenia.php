@@ -46,7 +46,10 @@
             echo "<tr><th>Kod książki</th><th>Tytuł książki</th><th>Numer wypożyczenia</th><th>Data wypożyczenia</th><th>Termin zwrotu</th><th>Akcje</th></tr>";
 
             while ($row_wypozyczenia = $result_wypozyczenia->fetch_assoc()) {
-                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["num"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td><td><button onclick=\"location.href='Prolong.php?kod=" . $row_wypozyczenia['kod'] . "';\">Prolonguj</button><button onclick=\"location.href='Zwrot.php?kod=" . $row_wypozyczenia['kod'] . "';\">Zwróć</button></td></tr>";
+                echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["num"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td><td>
+                <form method='post' action='Prolonguj.php'><input type='hidden' name='num' value='" . $row_wypozyczenia["num"] . "'><button type='submit' name='action' value='Prolonguj'>Prolonguj</button></form>
+                <form method='post' action='Zwrot.php'><input type='hidden' name='num' value='" . $row_wypozyczenia["num"] . "'><button type='submit' name='action' value='Zwroc'>Zwróć</button></form>
+                </td></tr>";
             }
 
             echo "</table>";
