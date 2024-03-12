@@ -7,45 +7,43 @@
 </head>
 <body>
     <nav>
-        <div class="buttons">
+        <div>
             <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
             <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
-            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj ksiąźkę</button>
-            <hr>
+            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
         </div>
     </nav>
     <h1>Dodawanie użytkownika</h1>
     <form action="dodaj_uzytkownik.php" method="post">
-        <div class="form-group">
+        <div>
             <label for="imie">Imię:</label>
             <input required type="text" name="imie" id="imie" maxlength="30" placeholder="Imię">
         </div>
-        <div class="form-group">
+        <div>
             <label for="nazwisko">Nazwisko:</label>
             <input required type="text" name="nazwisko" id="nazwisko" maxlength="30" placeholder="Nazwisko">
         </div>
-        <div class="form-group">
+        <div>
             <label for="miejscowosc">Miejscowość:</label>
             <input required type="text" name="miejscowosc" id="miejscowosc" maxlength="30" placeholder="Nazwa miejscowości">
         </div>
-        <div class="form-group">
+        <div>
             <label for="kod">Kod:</label>
             <input required type="text" name="kodpocztowy" id="kodpocztowy" maxlength="6" pattern="\d{2}-\d{3}" placeholder="__-___">
         </div>
-        <div class="form-group">
+        <div>
             <label for="ulica">Ulica:</label>
             <input required type="text" name="ulica" id="ulica" maxlength="30" pattern="(ul\.|al\.)\s.*" placeholder="ul. | al. Nazwa 00">
         </div>
-        <div class="form-group">
+        <div>
             <label for="telefon">Telefon:</label>
             <input required type="tel" name="telefon" id="telefon" maxlength="9" pattern="\d*" placeholder="_________">
         </div>
-        <div class="form-group">
+        <div>
             <label for="mail">Mail:</label>
             <input required type="email" name="mail" id="mail" maxlength="30" placeholder="example@mail.com">
         </div>
         <input type="submit" value="Zapisz">
     </form>
-    <br><a href='index.html'>Anuluj</a>
 </body>
 </html>

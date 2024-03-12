@@ -7,7 +7,7 @@
 </head>
 <body>
     <nav>
-        <div class="buttons">
+        <div>
             <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
             <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
             <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
@@ -15,15 +15,15 @@
     </nav>
     <h1>Dodawanie książki</h1>
     <form action="dodaj_ksiazka.php" method="post">
-        <div class="form-group">
+        <div>
             <label for="tytul">Tytuł:</label>
             <input required type="text" name="tytul" id="tytul" maxlength="50" placeholder="Tytuł książki">
         </div>
-        <div class="form-group">
+        <div>
             <label for="autor">Autor:</label>
             <input required type="text" name="autor" id="autor" maxlength="50" placeholder="Autor książki">
         </div>
-        <div class="form-group">
+        <div>
             <label for="autor">ISBN:</label>
             <input required type="text" name="isbn" id="isbn" maxlength="13" pattern="\d{9}|\d{10}|\d{13}" placeholder="_____________">
         </div>

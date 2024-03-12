@@ -6,14 +6,20 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <nav>
+        <div>
+            <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
+            <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
+            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
+        </div>
+    </nav>
     <h1>Wyświetlanie wypożyczeń</h1>
     <form action="Wyswietl_wypozyczenia.php" method="post">
-        <div class="form-group">
+        <div>
             <label for="uzytkownik">Czytelnik:</label>
             <input required type="text" name="uzytkownik" id="uzytkownik" maxlength="10" pattern="\d*" placeholder="__________">
         </div>
         <input type="submit" value="Wyświetl wypożyczenia">
     </form>
-    <br><a href='index.html'>Anuluj</a>
 </body>
 </html>

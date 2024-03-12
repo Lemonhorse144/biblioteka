@@ -7,12 +7,11 @@
 </head>
 <body>
     <nav>
-        <div class="buttons">
+        <div>
             <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
             <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
             <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
-            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj ksiąźkę</button>
-            <hr>
+            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
         </div>
     </nav>
     <h1>Potwierdzenie dodania książki</h1>

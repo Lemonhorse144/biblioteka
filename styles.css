@@ -12,10 +12,6 @@ p {
     color: #7d7d7d;
 }
 
-.buttons {
-    gap: 10px;
-}
-
 button {
     width: 100%;
     max-width: 400px;
@@ -27,6 +23,7 @@ button {
     color: #3d3d3d;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    gap: 10px;
 }
 
 input[type="submit"] {
@@ -55,10 +52,6 @@ button:hover,
 input[type="submit"]:hover {
     background-color: #c5ac4a;
     color: #322f2b;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 label {
@@ -115,10 +108,4 @@ ul {
 nav {
     list-style-type: none;
     padding: 1em;
-}
-
-.nawigacja {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }

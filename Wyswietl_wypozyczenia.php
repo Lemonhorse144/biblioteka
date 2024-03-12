@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <nav>
+        <div>
+            <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
+            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
+            <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
+            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
+        </div>
+    </nav>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $czytelnik = $_POST["uzytkownik"];
@@ -50,7 +58,5 @@
         $polaczenie->close();
     }
     ?>
-    <br>
-    <a href='index.html'>Wróć</a>
 </body>
 </html>
