@@ -109,3 +109,7 @@ nav {
     list-style-type: none;
     padding: 1em;
 }
+
+input {
+    margin-bottom: 15px;
+}
