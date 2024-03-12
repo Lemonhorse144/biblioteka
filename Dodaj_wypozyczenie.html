@@ -19,11 +19,13 @@
     <form action="Dodaj_wypozyczenie.php" method="post">
         <div>
             <label for="uzytkownik">Użytkownik:</label>
-            <input type="text" name="uzytkownik" id="uzytkownik" maxlength="10" pattern="\d*" placeholder="__________">
+            <input required type="text" name="uzytkownik" id="uzytkownik" maxlength="10" pattern="\d*"
+                placeholder="__________">
         </div>
         <div>
             <label for="ksiazka">Książka:</label>
-            <input type="text" name="ksiazka" id="ksiazka" maxlength="10" pattern="\d*" placeholder="__________">
+            <input required type="text" name="ksiazka" id="ksiazka" maxlength="10" pattern="\d*"
+                placeholder="__________">
         </div>
         <input type="submit" value="Przejdź do potwierdzenia">
     </form>
