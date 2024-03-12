@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8" />
     <title>Wypożyczenia dla czytelnika</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <nav>
         <div>
@@ -48,7 +50,7 @@
             while ($row_wypozyczenia = $result_wypozyczenia->fetch_assoc()) {
                 echo "<tr><td>" . $row_wypozyczenia["kod"] . "</td><td>" . $row_wypozyczenia["tytul"] . "</td><td>" . $row_wypozyczenia["num"] . "</td><td>" . $row_wypozyczenia["wypozyczenie"] . "</td><td>" . $row_wypozyczenia["zwrot"] . "</td><td>
                 <form method='post' action='Prolonguj.php'><input type='hidden' name='num' value='" . $row_wypozyczenia["num"] . "'><button type='submit' name='action' value='Prolonguj'>Prolonguj</button></form>
-                <form method='post' action='Zwrot.php'><input type='hidden' name='num' value='" . $row_wypozyczenia["num"] . "'><button type='submit' name='action' value='Zwroc'>Zwróć</button></form>
+                <form method='post' action='Zwroc.php'><input type='hidden' name='num' value='" . $row_wypozyczenia["num"] . "'><button type='submit' name='action' value='Zwroc'>Zwróć</button></form>
                 </td></tr>";
             }
 
@@ -61,4 +63,5 @@
     }
     ?>
 </body>
+
 </html>
