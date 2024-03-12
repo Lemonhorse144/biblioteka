@@ -11,6 +11,7 @@
             <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
             <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
             <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
+            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj ksiąźkę</button>
             <hr>
         </div>
     </nav>
