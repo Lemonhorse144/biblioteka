@@ -13,8 +13,6 @@ p {
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
@@ -22,6 +20,7 @@ button {
     width: 100%;
     max-width: 400px;
     padding: 15px 20px;
+    margin: 3px;
     font-size: 16px;
     border: none;
     background-color: #e3c077;
@@ -105,4 +104,21 @@ tbody {
 tr,
 tbody {
     border-bottom: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    list-style-type: none;
+    padding: 1em;
+}
+
+.nawigacja {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
