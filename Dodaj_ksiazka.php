@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <nav>
+        <div class="buttons">
+            <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
+            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
+            <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
+            <hr>
+        </div>
+    </nav>
     <h1>Potwierdzenie dodania książki</h1>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
