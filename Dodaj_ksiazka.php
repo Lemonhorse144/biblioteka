@@ -38,7 +38,5 @@
         $polaczenie->close();
     }
     ?>
-    <br>
-    <a href='index.html'>Wróć</a>
 </body>
 </html>
