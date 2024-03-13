@@ -57,7 +57,7 @@
 
         // Wykonaj zapytania
         if ($polaczenie->query($sql_czytelnicy) === TRUE && $polaczenie->query($sql_dane) === TRUE) {
-            echo "Dodano użytkownika o imieniu '$imie', nazwisku '$nazwisko', miejscowości '$miejscowosc', kodzie '$kodpocztowy', ulicy '$ulica', telefonie '$telefon' i mailu '$mail'.";
+            echo "Dodano użytkownika o imieniu '$imie', nazwisku '$nazwisko', miejscowości '$miejscowosc', kodzie pocztowym '$kodpocztowy', adresie '$ulica', telefonie '$telefon' i mailu '$mail'.";
         } else {
             echo "Błąd podczas dodawania użytkownika: " . $polaczenie->error;
         }
