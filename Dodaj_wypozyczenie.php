@@ -21,9 +21,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $czytelnik = $_POST["uzytkownik"];
         $kod = $_POST["ksiazka"];
-        // Ustaw datę wypożyczenia na teraz
         $data_wypozyczenia = date("Y-m-d");
-        // Ustaw datę zwrotu na miesiąc od teraz
         $data_zwrotu = date("Y-m-d", strtotime("+1 month"));
 
         $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
@@ -35,13 +33,11 @@
         $sql = "INSERT INTO wypozyczenia (czytelnik, kod, wypozyczenie, zwrot) VALUES ('$czytelnik', '$kod', '$data_wypozyczenia', '$data_zwrotu')";
 
         if ($polaczenie->query($sql) === TRUE) {
-            // Pobierz imię i nazwisko czytelnika
             $query_czytelnik = "SELECT imie, nazwisko FROM czytelnicy WHERE czytelnik = '$czytelnik'";
             $result_czytelnik = $polaczenie->query($query_czytelnik);
             $row_czytelnik = $result_czytelnik->fetch_assoc();
             $imie_nazwisko = $row_czytelnik["imie"] . " " . $row_czytelnik["nazwisko"];
 
-            // Pobierz tytuł książki
             $query_ksiazka = "SELECT tytul FROM ksiegozbior WHERE kod = '$kod'";
             $result_ksiazka = $polaczenie->query($query_ksiazka);
             $row_ksiazka = $result_ksiazka->fetch_assoc();

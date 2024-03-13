@@ -18,10 +18,8 @@
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
         }
 
-        // Pobierz obecną datę
         $data_oddania = date("Y-m-d");
 
-        // Wykonaj kwerendę modyfikującą rekord w tabeli wypozyczenia
         $sql_update = "UPDATE wypozyczenia SET oddano = '$data_oddania' WHERE num = '$num'";
 
         if ($polaczenie->query($sql_update) === TRUE) {

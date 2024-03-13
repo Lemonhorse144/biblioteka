@@ -26,7 +26,6 @@
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
         }
 
-        // Pobierz imię i nazwisko czytelnika
         $sql_czytelnik = "SELECT imie, nazwisko FROM czytelnicy WHERE czytelnik = '$czytelnik'";
         $result_czytelnik = $polaczenie->query($sql_czytelnik);
 
@@ -37,7 +36,6 @@
             echo "Brak danych dla podanego czytelnika.";
         }
 
-        // Pobierz wypożyczenia
         $sql_wypozyczenia = "SELECT wypozyczenia.num, wypozyczenia.czytelnik, wypozyczenia.kod, wypozyczenia.wypozyczenie, wypozyczenia.zwrot, ksiegozbior.tytul, ksiegozbior.autor
         FROM wypozyczenia JOIN ksiegozbior ON wypozyczenia.kod = ksiegozbior.kod
         WHERE wypozyczenia.czytelnik = '$czytelnik' AND wypozyczenia.oddano IS NULL
@@ -84,7 +82,6 @@
             echo "Brak wypożyczeń dla podanego czytelnika.";
         }
 
-        // Pobierz zwroty
         $sql_zwroty = "SELECT wypozyczenia.num, wypozyczenia.czytelnik, wypozyczenia.kod, wypozyczenia.wypozyczenie,
         wypozyczenia.zwrot, wypozyczenia.oddano, ksiegozbior.tytul, ksiegozbior.autor
         FROM wypozyczenia JOIN ksiegozbior ON wypozyczenia.kod = ksiegozbior.kod
