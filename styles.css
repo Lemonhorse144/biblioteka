@@ -74,7 +74,7 @@ a:hover {
 table {
     border: 1px;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 25px;
     font-size: 18px;
     text-align: left;
 }

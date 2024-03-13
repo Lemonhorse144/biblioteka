@@ -54,9 +54,8 @@
             <br><button id='Zwin'>Pokaż dane użytkownika</button>
             <div id='Ukryty' style='display: none;'>
                 <table><tbody>
-                    <tr><td>Miejscowosc</td><td>" . $row_czytelnik["miejscowosc"] . "</td></tr>
-                    <tr><td>Kodpocztowy</td><td>" . $row_czytelnik["kodpocztowy"] . "</td></tr>
                     <tr><td>Adres</td><td>" . $row_czytelnik["ulica"] . "</td></tr>
+                    <tr><td>Miejscowość</td><td>" . $row_czytelnik["miejscowosc"] . ", " . $row_czytelnik["kodpocztowy"] . "</td></tr>
                     <tr><td>Telefon</td><td>" . $row_czytelnik["telefon"] . "</td></tr>
                     <tr><td>Mail</td><td>" . $row_czytelnik["mail"] . "</td></tr>
                 </tbody></table>
