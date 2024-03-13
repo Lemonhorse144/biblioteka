@@ -5,6 +5,23 @@
     <meta charset="UTF-8" />
     <title>Wypożyczenia dla czytelnika</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var Zwin = document.getElementById("Zwin");
+            var Ukryty = document.getElementById("Ukryty");
+
+            Zwin.addEventListener("click", function () {
+                if (Ukryty.style.display === "none") {
+                    Ukryty.style.display = "block";
+                    Zwin.innerText = "Ukryj dane użytkownika";
+                } else {
+                    Ukryty.style.display = "none";
+                    Zwin.innerText = "Pokaż dane użytkownika";
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -26,12 +43,25 @@
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
         }
 
-        $sql_czytelnik = "SELECT czytelnicy.imie, czytelnicy.nazwisko, dane.miejscowosc, dane.kodpocztowy, dane.ulica, dane.telefon, dane.mail FROM czytelnicy JOIN dane ON czytelnicy.czytelnik = dane.czytelnik WHERE czytelnicy.czytelnik = '$czytelnik'";
+        $sql_czytelnik = "SELECT czytelnicy.imie, czytelnicy.nazwisko, dane.miejscowosc, dane.kodpocztowy, dane.ulica, dane.telefon, dane.mail 
+        FROM czytelnicy JOIN dane ON czytelnicy.czytelnik = dane.czytelnik 
+        WHERE czytelnicy.czytelnik = '$czytelnik'";
         $result_czytelnik = $polaczenie->query($sql_czytelnik);
 
         if ($result_czytelnik->num_rows > 0) {
             $row_czytelnik = $result_czytelnik->fetch_assoc();
-            echo "<h1>Czytelnik: " . $row_czytelnik["imie"] . " " . $row_czytelnik["nazwisko"] . "</h1>";
+            echo "<h1>Czytelnik: " . $row_czytelnik["imie"] . " " . $row_czytelnik["nazwisko"] . "</h1>
+            <br><button id='Zwin'>Pokaż dane użytkownika</button>
+            <div id='Ukryty' style='display: none;'>
+                <table><tbody>
+                    <tr><td>Miejscowosc</td><td>" . $row_czytelnik["miejscowosc"] . "</td></tr>
+                    <tr><td>Kodpocztowy</td><td>" . $row_czytelnik["kodpocztowy"] . "</td></tr>
+                    <tr><td>Adres</td><td>" . $row_czytelnik["ulica"] . "</td></tr>
+                    <tr><td>Telefon</td><td>" . $row_czytelnik["telefon"] . "</td></tr>
+                    <tr><td>Mail</td><td>" . $row_czytelnik["mail"] . "</td></tr>
+                </tbody></table>
+            </div>
+            ";
         } else {
             echo "Brak danych dla podanego czytelnika.";
         }
