@@ -26,7 +26,7 @@
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
         }
 
-        $sql_czytelnik = "SELECT imie, nazwisko FROM czytelnicy WHERE czytelnik = '$czytelnik'";
+        $sql_czytelnik = "SELECT czytelnicy.imie, czytelnicy.nazwisko, dane.miejscowosc, dane.kodpocztowy, dane.ulica, dane.telefon, dane.mail FROM czytelnicy JOIN dane ON czytelnicy.czytelnik = dane.czytelnik WHERE czytelnicy.czytelnik = '$czytelnik'";
         $result_czytelnik = $polaczenie->query($sql_czytelnik);
 
         if ($result_czytelnik->num_rows > 0) {
