@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Potwierdzenie dodania użytkownika</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 
 <body>
     <nav>
         <div>
-            <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
-            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
-            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
-            <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
+            <button onclick="location.href='../n_lend'">Wypożycz</button>
+            <button onclick="location.href='../view'">Zarządzaj</button>
+            <button onclick="location.href='../n_book'">Dodaj książkę</button>
+            <button onclick="location.href='../n_user'">Dodaj czytelnika</button>
         </div>
     </nav>
     <h1>Potwierdzenie dodania użytkownika</h1>

@@ -1,11 +1,5 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 CREATE DATABASE IF NOT EXISTS `biblioteka` DEFAULT CHARACTER SET utf8 COLLATE utf8_polish_ci;
 USE `biblioteka`;
 
@@ -16,7 +10,7 @@ CREATE TABLE `czytelnicy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 INSERT INTO `czytelnicy` (`czytelnik`, `nazwisko`, `imie`) VALUES
-(1, 'Lach', 'Karol'),
+(1, 'Hejmo', 'Patryk'),
 (2, 'Krzak', 'Mateusz');
 
 CREATE TABLE `dane` (
@@ -29,8 +23,8 @@ CREATE TABLE `dane` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 INSERT INTO `dane` (`czytelnik`, `miejscowosc`, `kodpocztowy`, `ulica`, `telefon`, `mail`) VALUES
-(1, 'Kraków', '30-695', 'ul. Rydygiera 19/26', 534959749, 'fanofsubnautica@gmail.com'),
-(2, 'Myślenice', '32-400', 'ul. Jagiellońska 8', 122740070, 'kaerzetaka@poczta.pl');
+(1, 'Poznań', '61-821', 'ul. Ogrodowa 13', 700487553, 'haejiemo@mail.net'),
+(2, 'Myślenice', '32-400', 'ul. Jagiellońska 8', 966647907, 'kaerzetaka@poczta.pl');
 
 CREATE TABLE `ksiegozbior` (
   `kod` bigint(10) NOT NULL,
@@ -53,9 +47,10 @@ CREATE TABLE `wypozyczenia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 INSERT INTO `wypozyczenia` (`czytelnik`, `kod`, `wypozyczenie`, `zwrot`, `oddano`, `num`) VALUES
-(1, 3, '2024-03-11', '2024-03-10', NULL, 1),
-(1, 3, '2024-03-12', '2024-04-13', NULL, 2),
-(1, 3, '2024-03-12', '2024-04-12', '2024-03-01', 3);
+(1, 1, '2024-02-12', '2024-03-12', NULL, 1),
+(1, 1, '2024-03-01', '2024-04-01', NULL, 2),
+(1, 2, '2024-03-01', '2024-04-01', '2024-03-13', 3),
+(2, 1, '2024-03-03', '2024-04-03', NULL, 4);
 
 
 ALTER TABLE `czytelnicy`
@@ -84,7 +79,7 @@ ALTER TABLE `ksiegozbior`
   MODIFY `kod` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 ALTER TABLE `wypozyczenia`
-  MODIFY `num` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `num` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 
 ALTER TABLE `dane`
@@ -93,7 +88,3 @@ ALTER TABLE `dane`
 ALTER TABLE `wypozyczenia`
   ADD CONSTRAINT `wypozyczenia_ibfk_1` FOREIGN KEY (`kod`) REFERENCES `ksiegozbior` (`kod`),
   ADD CONSTRAINT `wypozyczenia_ibfk_2` FOREIGN KEY (`czytelnik`) REFERENCES `czytelnicy` (`czytelnik`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
