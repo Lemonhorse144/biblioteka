@@ -24,7 +24,7 @@
         $data_wypozyczenia = date("Y-m-d");
         $data_zwrotu = date("Y-m-d", strtotime("+1 month"));
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
+        $polaczenie = new mysqli("localhost", "bibliotekarz", "Hhaslo", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);

@@ -23,7 +23,7 @@
         $autor = $_POST["autor"];
         $isbn = $_POST["isbn"];
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
+        $polaczenie = new mysqli("localhost", "bibliotekarz", "Hhaslo", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);

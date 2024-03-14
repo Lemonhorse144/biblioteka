@@ -12,7 +12,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $num = $_POST["num"];
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
+        $polaczenie = new mysqli("localhost", "bibliotekarz", "Hhaslo", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);

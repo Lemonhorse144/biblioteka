@@ -27,7 +27,7 @@
         $telefon = $_POST["telefon"];
         $mail = $_POST["mail"];
 
-        $polaczenie = new mysqli("localhost", "admin", "admin", "biblioteka");
+        $polaczenie = new mysqli("localhost", "bibliotekarz", "Hhaslo", "biblioteka");
 
         if ($polaczenie->connect_error) {
             die("Błąd połączenia z bazą danych: " . $polaczenie->connect_error);
