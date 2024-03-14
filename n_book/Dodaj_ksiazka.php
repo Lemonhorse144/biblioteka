@@ -10,10 +10,10 @@
 <body>
     <nav>
         <div>
-            <button onclick="location.href='Dodaj_wypozyczenie.html'">Wypożycz</button>
-            <button onclick="location.href='Wyswietl_wypozyczenia.html'">Zarządzaj</button>
-            <button onclick="location.href='Dodaj_uzytkownik.html'">Dodaj czytelnika</button>
-            <button onclick="location.href='Dodaj_ksiazka.html'">Dodaj książkę</button>
+            <button onclick="location.href='../n_lend'">Wypożycz</button>
+            <button onclick="location.href='../view'">Zarządzaj</button>
+            <button onclick="location.href='../n_user'">Dodaj czytelnika</button>
+            <button onclick="location.href='../n_book'">Dodaj książkę</button>
         </div>
     </nav>
     <h1>Potwierdzenie dodania książki</h1>
